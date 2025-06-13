@@ -6,6 +6,7 @@ resource "aws_instance" "roboshop"{
 
   tags = {
     Name = "${var.project}-${var.environment}-${var.instance_names[count.index]}"
+    Project = var.project
   }
 }
 
